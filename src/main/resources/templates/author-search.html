@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Author search</title>
+</head>
+<body>
+<form th:action="@{/processAuthorSearchForm}" method="post">
+    <input type="text" name="authorName" placeholder="enter author lastname">
+    <input type="submit">
+</form>
+</body>
+</html>
