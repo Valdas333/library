@@ -18,12 +18,12 @@ public class BookSearchFormController {
     }
 
     @GetMapping("/show-form")
-    private String showForm(){
+    public String showForm(){
         return "author-search";
     }
 
     @PostMapping("/processAuthorSearchForm")
-    private String processAuthorSearchForm(@RequestParam ("authorName") String authorName, Model model){
+    public String processAuthorSearchForm(@RequestParam ("authorName") String authorName, Model model){
         List <Book> authorBooks = bookSearchController.searchBooksByAuthor(authorName);
         System.out.println(authorBooks);
         model.addAttribute("author", authorName);
